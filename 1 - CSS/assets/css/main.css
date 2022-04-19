@@ -1,0 +1,46 @@
+*{
+    margin:0;
+    padding: 0;
+}
+/* h1{
+    color: red;
+}
+#header1{
+    color : aqua;
+}
+.text-blue,.aas{
+    color: cyan
+}
+.aas{
+    background-color: black;
+}
+.bg-ap{
+    background-color: coral;
+} */
+/* p{
+    color:red
+} */
+/* .container ~ span, .container~p{
+    color: red;
+} */
+/* .menu li{
+    color:rgba(100,155,55,50%);
+} */
+
+/* .square{
+    width: 100px;
+    height: 100px;
+    margin: 5%;
+    background-color: red;
+    transition: 1s box-shadow;
+}
+.square:hover{
+    box-shadow: 0px 0px 25px black;
+} */
+.modelbox{
+    width: 200px;
+    background-color: rebeccapurple;
+    height: 150px;
+    overflow: auto;
+}
+
