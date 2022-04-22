@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* body{
+body{
     background-color: antiquewhite;
 }
 #background{
@@ -133,7 +133,7 @@ nav{
 }
 .btn-about:hover::before{
     width: 100%;
-} */
+}
 html{
     scroll-behavior: smooth;
 }

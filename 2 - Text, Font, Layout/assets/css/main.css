@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.grid-container{
+    display: grid;
+    grid-template-areas:
+    'menu header header header header header header'
+    'menu dashboard dashboard dashboard dashboard dashboard dashboard'
+    'menu area area area bar bar bar'
+    'menu table table table table table table' ;
+    gap:10px;
+    background-color: chocolate;
+}
+.grid-item{
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+header{grid-area: header;}
+aside{grid-area: menu;}
+#dashboard{grid-area: dashboard;}
+#area{grid-area: area;}
+#bar{grid-area: bar;}
+#table{grid-area: table;}
+.dashboard-item{
+    width: 24%;
+    background-color: black;
+    height: 75px;
+    display: inline-block;
+}
+.dashboard-primary{
+    background-color: blue;
+}
+.dashboard-warning{
+    background-color: yellow;
+}
