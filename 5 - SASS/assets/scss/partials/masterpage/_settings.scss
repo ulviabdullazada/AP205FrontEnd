@@ -1,0 +1,25 @@
+.settings{
+    font-size: $font-size*2;
+    background-color: $bg-color;
+    width: $main-size*10;
+    padding: $main-size;
+    border-radius: 10px 0px 0px 10px;
+    position: fixed;
+    right: 0;
+    z-index: 10;
+    top: 100px;
+    box-shadow: 10px 0 5px 5px rgba($color: silver, $alpha: 0.6);
+    border: 1px solid rgba($color: silver, $alpha: 0.6);
+    color:black;
+    i{
+        animation: firlan 2s linear infinite;
+    }
+}
+@keyframes firlan {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
+}

@@ -1,0 +1,13 @@
+@import './partials/variables';
+*{
+    margin: 0;
+    padding: 0;
+    font-family: $font-family;
+}
+body{
+    background-color: $main-color;
+}
+@import './partials/extends';
+@import './partials/mixins';
+@import './partials/masterpage/index';
+@import './partials/home/header'

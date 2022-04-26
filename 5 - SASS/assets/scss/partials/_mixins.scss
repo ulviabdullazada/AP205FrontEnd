@@ -1,0 +1,6 @@
+@mixin btn($bColor:#0061f2,$color:#fff){
+    background-color: $bColor;
+    color:$color;
+    padding: $main-size*2 $main-size*4;
+    @extend %btn;
+}

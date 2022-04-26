@@ -1,0 +1,17 @@
+nav{
+    @extend %container;
+    justify-content: space-between;
+    padding: $main-size*5 0;
+    ul li{
+        display: inline-block;
+        margin: $main-size*5 $main-size*2;
+    }
+    .right-side {
+        display: flex;
+        align-items: baseline;
+        button{
+            @include btn;
+            display: inline-block;
+        }
+    }
+}
