@@ -1,0 +1,18 @@
+.item{
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+}
+.dragArea{
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+}
+
+.area{
+    display: inline-block;
+    margin: 50px;
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+}

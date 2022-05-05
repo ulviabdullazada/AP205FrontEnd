@@ -73,7 +73,6 @@
             ball.style.top = resetVal + "px";
         }
         function toRight() {
-            
             if (parseInt(box.style.width) - (Number(parseInt(ball.style.left)) + Number(parseInt(ball.style.width))) > step) {
                 ball.style.left = Number(parseInt(ball.style.left))+Number(step) + "px";
             }
@@ -82,7 +81,6 @@
             }
         }
         function toLeft() {
-            
             if (parseInt(ball.style.left) > step) {
                 ball.style.left = Number(parseInt(ball.style.left))-Number(step) + "px";
             }
