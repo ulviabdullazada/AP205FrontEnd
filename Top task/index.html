@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            border: 1px solid black;
+            background-color: aquamarine;
+            margin: 20px auto;
+            position: relative;
+        }
+        .ball{
+            border: 1px solid black;
+            border-radius: 50%;
+            background-color: gold;
+            position: absolute;
+        }
+        .w-100{
+            width: 100%;
+        }
+        .text-center{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="number" value="600" id="box">
+        <input type="number" value="60" id="ball">
+        <input type="number" value="15" id="step">
+        <button>Resize</button>
+    </form>
+    <div class="w-100 text-center">
+        <div class="box">
+            <div class="ball"></div>
+        </div>
+    </div>
+    <script>
+        const inBox = document.querySelector("#box");
+        const inBall = document.querySelector("#ball");
+        const inStep = document.querySelector("#step");
+        const box = document.querySelector(".box");
+        const ball = document.querySelector(".ball");
+        const btn = document.querySelector("button");
+        let step = 0;
+        window.addEventListener("keydown",function(e){
+            if (e.key == "ArrowRight") {
+                toRight();
+            }
+            if (e.key == "ArrowLeft") {
+                toLeft();
+            }
+        });
+        btn.addEventListener("click",function(ev){
+            ev.preventDefault();
+            resize();
+        })
+        resize();
+        function resize() {
+            box.style.width = inBox.value +"px";
+            box.style.height = inBox.value +"px";
+            ball.style.width = inBall.value +"px";
+            ball.style.height = inBall.value +"px";
+            step = inStep.value;
+            ballReset();
+        }
+        function ballReset() {
+            let resetVal = (parseInt(box.style.width) - parseInt(ball.style.width))/2;
+            ball.style.left = resetVal + "px";
+            ball.style.top = resetVal + "px";
+        }
+        function toRight() {
+            
+            if (parseInt(box.style.width) - (Number(parseInt(ball.style.left)) + Number(parseInt(ball.style.width))) > step) {
+                ball.style.left = Number(parseInt(ball.style.left))+Number(step) + "px";
+            }
+            else{
+                ball.style.left = parseInt(box.style.width) - parseInt(ball.style.width) + "px";
+            }
+        }
+        function toLeft() {
+            
+            if (parseInt(ball.style.left) > step) {
+                ball.style.left = Number(parseInt(ball.style.left))-Number(step) + "px";
+            }
+            else{
+                ball.style.left = 0 + "px";
+            }
+        }
+    </script>
+</body>
+</html>
