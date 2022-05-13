@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container p-5">
+        <input type="text">
+        <input type="color">
+        <button class="btn btn-primary">Click</button>
+    </div>
+    <script>
+        // let removeItemId = 0;
+        // for (let index = 0; index < stdns.length; index++) {
+        //     if (stdns[i].id == id) {
+        //         removeItemId = i;
+        //         break;
+        //     }            
+        // }
+        // stdns.splice(removeItemId)
+        let btn = document.querySelector("button");
+        let inp = document.querySelector("input[type='text']");
+        let color = document.querySelector("input[type='color']");
+        // localStorage.setItem("students",JSON.stringify([]))
+        btn.addEventListener("click",function () {
+            let stdns = JSON.parse(localStorage.getItem("students"));
+            let member = {
+                id : stdns.length+1,
+                name : inp.value,
+                favColor : color.value
+            }
+            stdns.push(member)
+            localStorage.setItem("students",JSON.stringify(stdns))
+        })
+    </script>
+</body>
+</html>
